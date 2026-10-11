@@ -125,24 +125,24 @@ public final class UnicodeStyleConverter {
         Map<Integer, Integer> circled = all.get(Style.CIRCLED);
 
         for (int i = 0; i < 26; i++) {
-            circled.put((int) ('A' + i), 0x24B6 + i);
-            circled.put((int) ('a' + i), 0x24D0 + i);
+            circled.put( 'A' + i, 0x24B6 + i);
+            circled.put( 'a' + i, 0x24D0 + i);
         }
 
         for (int i = 1; i <= 9; i++) {
-            circled.put((int) ('0' + i), 0x2460 + i - 1);
+            circled.put('0' + i, 0x2460 + i - 1);
         }
-        circled.put((int) '0', 0x24EA);
+        circled.put('0', 0x24EA);
 
         Map<Integer, Integer> fullwidth = all.get(Style.FULLWIDTH);
 
         for (int i = 0; i < 26; i++) {
-            fullwidth.put((int) ('A' + i), 0xFF21 + i);
-            fullwidth.put((int) ('a' + i), 0xFF41 + i);
+            fullwidth.put('A' + i, 0xFF21 + i);
+            fullwidth.put('a' + i, 0xFF41 + i);
         }
 
         for (int i = 0; i <= 9; i++) {
-            fullwidth.put((int) ('0' + i), 0xFF10 + i);
+            fullwidth.put('0' + i, 0xFF10 + i);
         }
 
         for (Map.Entry<Style, Map<Integer, Integer>> entry
