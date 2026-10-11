@@ -132,7 +132,7 @@ public final class UnicodeStyleConverter {
         for (int i = 1; i <= 9; i++) {
             circled.put('0' + i, 0x2460 + i - 1);
         }
-        circled.put('0', 0x24EA);
+        circled.put((int) '0', 0x24EA);
 
         Map<Integer, Integer> fullwidth = all.get(Style.FULLWIDTH);
 
@@ -162,8 +162,8 @@ public final class UnicodeStyleConverter {
             int[] specialCodePoints) {
 
         for (int i = 0; i < 26; i++) {
-            map.put((int) ('A' + i), upperStart + i);
-            map.put((int) ('a' + i), lowerStart + i);
+            map.put( 'A' + i, upperStart + i);
+            map.put('a' + i, lowerStart + i);
         }
 
         if (specialLetters != null && specialCodePoints != null) {
